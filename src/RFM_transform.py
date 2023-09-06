@@ -21,12 +21,6 @@ def group_data(data_2011):
     return agg_data
 
 
-# Calculate recency function
-def calculate_recency(agg_data):
-    agg_data["recency"] = round(
-    (agg_data['recent_purchase_date'].max() - agg_data['recent_purchase_date']) / np.timedelta64(1, 'D'), 0)
-
-    return agg_data
 
 # Calculate frequency and monetary function
 def calculate_frequency_and_monetary(agg_data):
@@ -61,6 +55,8 @@ def calculate_rfm_metrics(data):
     rfm = agg_data[['customer_id', 'recency', 'frequency', 'monetary']]
 
     return rfm
+
+
 
 
 
