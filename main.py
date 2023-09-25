@@ -4,7 +4,6 @@ import sys
 from datetime import datetime
 import pandas as pd
 
-
 from src.extract import extract_transactional_data
 from src.RFM_transform import create_rfm_segments
 
@@ -12,8 +11,8 @@ module_path = os.path.abspath(os.path.join('..'))
 if module_path not in sys.path:
     sys.path.append(module_path)
 
-from dotenv import load_dotenv
-load_dotenv()  # only for local testing
+# from dotenv import load_dotenv
+# load_dotenv()  # only for local testing
 
 # import variables from .env file
 dbname = os.getenv("dbname")
